@@ -20,4 +20,43 @@ fn main() {
     let remainder = 43 % 5;
 
     println!("The remainder of 43 divided by 5 is: {}", remainder);
+
+    let tup: (i32, &str, f64, bool) = (500, "h1", 1.5, false);
+
+    let (a, b, c, d) = tup;
+
+    println!("a: {}", a);
+    println!("b: {}", b);
+    println!("c: {}", c);
+    println!("d: {}", d);
+
+    let array: [i32; 5] = [1, 2, 3, 4, 5];
+
+    println!("array[0]: {}", array[0]);
+
+    let mut array2: [i32; 5] = [0; 5];
+
+    array2[0] = 10;
+    array2[1] = 20;
+    array2[2] = 30;
+    array2[3] = 40;
+    array2[4] = 50;
+
+    println!("array2[0]: {}", array2[0]);
+
+    let mut vector: Vec<i32> = vec![1, 2, 3, 4, 5];
+
+    vector.push(6);
+
+    println!("vector: {:?}", vector);
+
+    let mut vec: Vec<&str> = Vec::with_capacity(2);
+
+    vec.push("hello");
+    vec.push("world");
+    vec.push("banana");
+
+    vec.reverse();
+
+    println!("vec: {:?}", vec);
 }
