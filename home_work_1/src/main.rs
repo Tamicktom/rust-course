@@ -7,6 +7,9 @@ fn main() {
 
     println!("\nExercice 3:");
     exercice_3();
+
+    println!("\nExercice 4:");
+    exercice_4();
 }
 
 // Create three variables with the names: val1, val2, and ans.
@@ -64,4 +67,31 @@ fn concat_string(s: String) -> String {
     let world = " World".to_string();
 
     s + &world
+}
+
+// Create a function called control_flow.
+// This is going to take one argument that is an integer.
+// Based on this integer, print out the following:
+// "The value is one",
+// "The value is greater than 50",
+// "The value is less than 25",
+// or "The value is greater than 25 but less than 50".
+
+fn exercice_4() {
+    control_flow(1); // The value is one
+    control_flow(51); // The value is greater than 50
+    control_flow(24); // The value is less than 25
+    control_flow(30); // The value is greater than 25 but less than 50
+}
+
+fn control_flow(value: i32) {
+    if value == 1 {
+        println!("The value is one");
+    } else if value > 50 {
+        println!("The value is greater than 50");
+    } else if value < 25 {
+        println!("The value is less than 25");
+    } else {
+        println!("The value is greater than 25 but less than 50");
+    }
 }
