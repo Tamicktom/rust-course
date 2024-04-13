@@ -1,6 +1,5 @@
-workspace = { members = ["home_work_1"] }
 [package]
-name = "control_flow"
+name = "home_work_1"
 version = "0.1.0"
 edition = "2021"
 
