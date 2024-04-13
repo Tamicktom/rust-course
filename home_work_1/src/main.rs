@@ -4,6 +4,9 @@ fn main() {
 
     println!("\nExercice 2:");
     exercice_2();
+
+    println!("\nExercice 3:");
+    exercice_3();
 }
 
 // Create three variables with the names: val1, val2, and ans.
@@ -42,4 +45,23 @@ fn exercice_2() {
     vector.push(12);
 
     println!("{:?}", vector); // [2, 4, 6, 8, 12]
+}
+
+// Create a function called "concat_string".
+// Create a string variable and assign the value "Hello" to it.
+// The function is going to take one argument that is of type string and is going to return a String.
+// Inside this function, concatenate the string " World".
+// Print out the results in main() to confirm your results.
+
+fn exercice_3() {
+    let s = "Hello".to_string();
+    let result = concat_string(s);
+
+    println!("{}", result); // Hello World
+}
+
+fn concat_string(s: String) -> String {
+    let world = " World".to_string();
+
+    s + &world
 }
