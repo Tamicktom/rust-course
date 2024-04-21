@@ -34,14 +34,26 @@ fn main() {
 
     //  println!("{}", str4);
 
-    let mut str1 = String::from("hello");
-    let mut str2: String;
+    //    let mut str1 = String::from("hello");
+    //let mut str2: String;
 
-    loop {
-        str2 = str1;
-        println!("{}", str2);
-        break;
-    }
+    //  loop {
+    //        str2 = str1;
+    //println!("{}", str2);
+    //  break;
+    //}
+    //
+    let mut s = String::from("hello");
+    change_string(&mut s);
+    println!("{}", s);
+
+    let string = String::from("String");
+    let copy_str = string;
+    println!("{}", copy_str);
+}
+
+fn change_string(s: &mut String) {
+    s.push_str(", world");
 }
 
 fn takes_ownership(s: String) {
@@ -55,6 +67,7 @@ fn makes_copy(one: i32) {
     println!("{}", val2);
 }
 
+/*
 fn give_ownership() -> String {
     "given".to_string()
 }
@@ -62,3 +75,4 @@ fn give_ownership() -> String {
 fn take_and_give(str2: String) -> String {
     str2
 }
+*/
